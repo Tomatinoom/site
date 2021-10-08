@@ -1,0 +1,452 @@
+html,
+body {
+  height: 100%;
+}
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none; // Yeah, yeah everybody write about it
+}
+
+input[type="number"],
+input[type="number"]:hover,
+input[type="number"]:focus {
+  appearance: none;
+  -moz-appearance: textfield;
+}
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  line-height: 30px;
+  color: #fff;
+  background-color: #3d3e45;
+}
+.container {
+  max-width: 1310px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.container-fluid {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+.services__menu {
+  color: rgba(#fff, 0.5);
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1.5px;
+  font-weight: 800;
+  text-transform: uppercase;
+  &:hover {
+    color: rgba(#fff, 1);
+  }
+}
+.slider__arrow {
+  height: 50px;
+  width: 50px;
+  border-radius: 50px;
+  border: none;
+  background-color: rgba(#fff, 0.1);
+  cursor: pointer;
+}
+.slider__btn {
+  &-img {
+    padding-left: 13px;
+  }
+  &-left {
+    transform: rotate(180deg);
+  }
+}
+
+.reviews {
+  &__slider-arrow {
+    background: transparent;
+    border: none;
+    width: 50px;
+    height: 100%;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-position: top center;
+  }
+  &__slider-left {
+    background-image: url("../images/slider/reviews-arrow-active.svg");
+    opacity: 0.3;
+    transform: rotate(180deg);
+    background-position: bottom center;
+    &:active {
+      opacity: 1;
+    }
+  }
+  &__slider-right {
+    background-image: url("../images/slider/reviews-arrow-active.svg");
+    opacity: 0.3;
+    &:active {
+      opacity: 1;
+    }
+  }
+}
+.portfolio__slider-box {
+  & .slick-slide {
+    transform: scale(1);
+    transition: transform 0.7s ease-in-out;
+    margin: 100px 50px 150px 50px;
+  }
+  & .slick-current {
+    transform: scale(1.1);
+    &:hover {
+      .portfolio__item-box {
+        filter: opacity(100%);
+        transition: 0.4s ease-in-out;
+        z-index: 10;
+      }
+      .portfolio__item-title {
+        line-height: 113%;
+        // transition: .4s ease-in-out;
+      }
+    }
+    &::after {
+      content: "";
+      width: 100%;
+      height: 98%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-color: rgba(#333, 0);
+      transition: 0.4s ease-in-out;
+    }
+    &:hover::after {
+      background-color: rgba(#333, 0.5);
+    }
+  }
+}
+.portfolio__item {
+  &:hover {
+    .portfolio__item-box {
+      filter: opacity(100%);
+      transition: 0.4s ease-in-out;
+      z-index: 10;
+    }
+    .portfolio__item-title {
+      line-height: 113%;
+      // transition: .4s ease-in-out;
+    }
+  }
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: rgba(#333, 0);
+    transition: 0.4s ease-in-out;
+  }
+  &:hover::after {
+    background-color: rgba(#333, 0.5);
+  }
+}
+.reviews__dots {
+  display: flex;
+  justify-content: center;
+  li {
+    margin: 0 3px;
+    width: 16px;
+    height: 16px;
+  }
+  button {
+    width: 4px;
+    height: 4px;
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    cursor: pointer;
+  }
+  li.slick-active button {
+    background-color: $gold;
+  }
+  li.slick-active {
+    width: 16px;
+    height: 16px;
+    position: relative;
+    &::after {
+      content: "";
+      position: absolute;
+      width: 16px;
+      height: 16px;
+      border: 1px solid rgba($gold, 1);
+      border-radius: 50%;
+      top: 12px;
+      left: -6px;
+    }
+  }
+}
+
+.scrollbar__dots {
+  display: flex;
+  justify-content: flex-start;
+  li {
+    padding: 0;
+    margin: 0;
+  }
+  button {
+    font-size: 0;
+    line-height: 0;
+    padding: 0;
+    cursor: pointer;
+    height: 1px;
+    background-color: rgba(#fff, 0.5);
+    border: none;
+    transition: all 0.1s;
+  }
+  li.slick-active button {
+    height: 3px;
+    border: none;
+    background-color: rgba(#fff, 1);
+    animation: colorChange 1s;
+  }
+}
+
+.btn-сonnect {
+  padding: 23px 41px;
+  border: none;
+  font-size: 12px;
+  font-weight: 800;
+  line-height: 15px;
+  font-family: "Montserrat", sans-serif;
+  color: #fff;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  cursor: pointer;
+  &[disabled] {
+    background-color: #3d3e45;
+    color: rgba(#fff, 0.3);
+  }
+  &:not([disabled]) {
+    background-color: #3d3e45;
+    &:hover {
+      background-color: #535560;
+    }
+    &:active {
+      background-color: $gold;
+    }
+  }
+}
+.popup-play {
+  height: 60px;
+  width: 60px;
+  background-color: #fff;
+  border-radius: 50px;
+  cursor: pointer;
+  position: relative;
+  position: absolute;
+  display: block;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 50%;
+    transform: translate(50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    background-color: rgba(#fff, 0.2);
+    animation: pulsation 1s ease-out alternate-reverse infinite;
+  }
+}
+.popup-imgbtn {
+  position: absolute;
+  top: 50%;
+  right: 50%;
+  transform: translate(70%, -50%);
+}
+.popup-form {
+  background-color: #333;
+}
+.form {
+  &-title {
+    font-size: 24px;
+    line-height: 32px;
+    font-weight: 700;
+    margin-bottom: 17px;
+  }
+  &__data {
+    margin-bottom: 32px;
+  }
+  &__name,
+  &__tel {
+    max-width: 410px;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+    border: none;
+    outline: 0;
+    line-height: 24px;
+    font-size: 16px;
+    font-weight: 600;
+    color: #fff;
+    padding: 14px 16px 12px 16px;
+    &::placeholder {
+      font-size: 16px;
+      line-height: 24px;
+      color: #fff;
+      font-weight: 400;
+    }
+  }
+  &__name {
+    margin-bottom: 36px;
+  }
+  &__checkbox {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+    padding-left: 38px;
+    margin-top: -3px;
+  }
+  &__checkbox-style {
+    height: 20px;
+    width: 20px;
+    border: 2px solid #fff;
+    position: absolute;
+    margin-left: -38px;
+    margin-top: -3px;
+    cursor: pointer;
+  }
+
+  &__checkbox-box {
+    margin-bottom: 32px;
+  }
+  &__checkbox-label {
+    font-size: 14px;
+    line-height: 18px;
+    display: block;
+    padding-left: 56px;
+  }
+  &__agreement {
+    color: #fff;
+    border-bottom: 1px solid #fff;
+  }
+  &__btn {
+    padding: 23px 35px;
+    background-color: $gold;
+    font-weight: 900;
+    font-size: 12px;
+    line-height: 15px;
+    letter-spacing: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+    border: none;
+    cursor: pointer;
+    &[disabled] {
+      background-color: #3d3e45;
+      color: rgba(#fff, 0.3);
+    }
+    &:not([disabled]) {
+      &:hover {
+        background-color: #c79301;
+      }
+      &:focus {
+        background-color: $gold;
+        color: #3d3e45;
+      }
+      &:active {
+        border-color: #c79301;
+        color: #3d3e45;
+      }
+    }
+  }
+}
+.form__checkbox:checked + .form__checkbox-style::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background-color: $gold;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.form__checkbox:checked + .form__checkbox-style {
+  border: 2px solid $gold;
+}
+.socials-list {
+  display: flex;
+  align-items: center;
+}
+.socials-img {
+  &-instagram {
+    min-width: 28px;
+    min-height: 29px;
+  }
+  &-vk {
+    min-width: 29px;
+    min-height: 30px;
+  }
+  &-youtube {
+    min-width: 29px;
+    min-height: 23px;
+  }
+}
+
+.more-works {
+  color: $gold;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  font-weight: 800;
+  cursor: pointer;
+  user-select: none;
+  &::after {
+    position: absolute;
+    content: "";
+    width: 65%;
+    background-color: $gold;
+    height: 2px;
+    bottom: -9px;
+    left: 0;
+  }
+  &:active {
+    color: #c79301;
+    &::after {
+      background-color: #c79301;
+    }
+  }
+}
+
+//      ANIMATIONS
+@keyframes pulsation {
+  100% {
+    width: 90px;
+    height: 90px;
+  }
+}
+
+@keyframes colorChange {
+  0% {
+    background-color: $gold;
+  }
+  40% {
+    background-color: $gold;
+  }
+  100% {
+    background-color: rgba(#fff, 1);
+  }
+}
