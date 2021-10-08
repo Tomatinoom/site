@@ -66,7 +66,7 @@ $(function () {
       '<button class="header__arrow slider__arrow slider__btn-left"><img class="slider__btn-img" src="images/slider/slider-arrow.svg" alt=""></button>',
     nextArrow:
       '<button class="header__arrow slider__arrow slider__btn-right"><img class="slider__btn-img" src="images/slider/slider-arrow.svg" alt=""></button>',
-    // autoplay: true,
+    autoplay: true,
     infinite: true,
   });
 
