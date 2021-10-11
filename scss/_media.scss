@@ -317,11 +317,6 @@
   .header__container {
     padding: 0;
   }
-  .right-menu {
-    &.right-menu-active {
-      transform: translateX(0px);
-    }
-  }
 }
 
 @media (max-width: 650px) {

@@ -21,6 +21,7 @@ body {
   background-color: #3d3e45;
   position: relative;
   overflow-x: hidden;
+  min-width: 320px;
 }
 .container {
   max-width: 1310px;
@@ -58,15 +59,20 @@ body {
 
 .right-menu {
   position: absolute;
+  display: block;
   top: 0;
+  bottom: 0;
   margin-top: 53px;
   max-width: 768px;
-  max-height: 1000px;
+  width: 100%;
   right: 0;
   transform: translateX(500%);
   transition: transform 0.7s ease-in-out;
-  z-index: 10;
+  z-index: 1000;
   background: linear-gradient(225deg, #3c4148 0%, #15151a 52.08%), #3b3b3b;
+  &.right-menu-active {
+    transform: translateX(0px);
+  }
   &-inner {
     padding-top: 75px;
     padding-left: 80px;
