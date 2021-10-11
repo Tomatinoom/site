@@ -57,6 +57,16 @@ body {
 }
 
 .right-menu {
+  position: absolute;
+  top: 0;
+  margin-top: 53px;
+  width: 100%;
+  height: auto;
+  right: 0;
+  transform: translateX(500%);
+  transition: transform 0.7s ease-in-out;
+  z-index: 10;
+  background: linear-gradient(225deg, #3c4148 0%, #15151a 52.08%), #3b3b3b;
   &-inner {
     padding-top: 75px;
     padding-left: 80px;
