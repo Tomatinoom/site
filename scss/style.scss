@@ -29,6 +29,14 @@
     height: 100%;
     max-height: 60px;
   }
+  &-top__nav-tel {
+    font-size: 12px;
+    line-height: 15px;
+    color: $gold;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    display: none;
+  }
   &-top__instagram {
     margin-left: 190px;
     margin-right: 34px;
@@ -54,8 +62,7 @@
       top: -35px;
       right: 0;
       z-index: -1;
-      // margin-right: 40px;
-      // при медиа в марджин вписать 40
+      pointer-events: none;
     }
   }
   &__slider-box {
@@ -1123,8 +1130,6 @@
   }
   &__contact-box {
     margin-bottom: 22px;
-    line-height: 22px;
-    font-size: 15px;
   }
   &__contact-tel,
   &__contact-mail {
@@ -1152,5 +1157,13 @@
     }
   }
 }
-
+.contact-box {
+  line-height: 22px;
+  font-size: 15px;
+}
+.contact-tel,
+.contact-mail {
+  display: block;
+  color: #fff;
+}
 @import "media";

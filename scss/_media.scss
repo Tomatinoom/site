@@ -248,7 +248,7 @@
   }
   .header-bottom,
   .header-top__instagram,
-  .menu__list {
+  .menu {
     display: none;
   }
   .header__slider::after {
@@ -259,8 +259,22 @@
     height: 579px;
     width: 100%;
   }
-  .burger-menu {
+  .header-top__nav-tel {
     display: block;
+  }
+  .burger-menu {
+    background-image: url("../images/icon/menu.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    flex-direction: column;
+    margin-right: 30px;
+    margin-left: 30px;
+    width: 25px;
+    height: 17px;
+    cursor: pointer;
+    &.burger-menu-active {
+      background-image: url("../images/icon/close.svg");
+    }
   }
   .header__slider-img {
     min-height: 656px;
@@ -295,26 +309,32 @@
     margin: 0 !important;
     height: 53px;
   }
+  .header-top__nav-logo-img {
+    margin: 0;
+    width: 72px;
+    height: 36px;
+  }
   .header__container {
     padding: 0;
   }
-  .burger-menu {
-    display: flex;
-    flex-direction: column;
-    margin-right: 30px;
-    width: 25px;
-    height: 14px;
-    cursor: pointer;
-    &__line {
-      height: 2px;
-      width: 100%;
-      background-color: #3b3b3b;
-      &:not(:last-child) {
-        margin-bottom: 4px;
-      }
+  .right-menu {
+    position: absolute;
+    top: 0;
+    margin-top: 53px;
+    // max-width: 768px;
+    width: 100%;
+    height: auto;
+    right: 0;
+    transform: translateX(500%);
+    transition: transform 0.7s ease-in-out;
+    z-index: 10;
+    background: linear-gradient(225deg, #3c4148 0%, #15151a 52.08%), #3b3b3b;
+    &.right-menu-active {
+      transform: translateX(0px);
     }
   }
 }
+
 @media (max-width: 650px) {
   .header__slider-text {
     max-width: 600px;
@@ -367,17 +387,6 @@
   .header-top__nav {
     height: 53px;
   }
-  .header-top__nav-logo-img {
-    width: 72px;
-    height: 36px;
-  }
-}
-
-@media (max-width: 430px) {
-  .header__slider-text,
-  .header__slider-btn {
-    left: 18px;
-  }
 }
 
 @media (max-width: 430px) {
@@ -387,6 +396,10 @@
   }
   .header__popup-play {
     left: 40px;
+  }
+  .header__slider-text,
+  .header__slider-btn {
+    left: 18px;
   }
 }
 
@@ -406,5 +419,23 @@
   .services__item-text {
     font-size: 15px;
     left: 7px;
+  }
+}
+
+@media (max-width: 400px) {
+  .right-menu {
+    &-inner {
+      padding-left: 30px;
+    }
+    &__list-link,
+    &__list-item {
+      font-size: 16px;
+      color: #fff;
+      line-height: 20px;
+    }
+    &__sub-list-link {
+      font-size: 12px;
+      line-height: 15px;
+    }
   }
 }

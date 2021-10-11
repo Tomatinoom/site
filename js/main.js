@@ -67,7 +67,9 @@ $(function () {
     nextArrow:
       '<button class="header__arrow slider__arrow slider__btn-right"><img class="slider__btn-img" src="images/slider/slider-arrow.svg" alt=""></button>',
     autoplay: true,
-    infinite: true,
+    // fade: true,
+    swipeToSlide: true,
+    swipe: true,
   });
 
   //    reviews__slider
@@ -81,7 +83,6 @@ $(function () {
   });
 
   //    excursion__slider-box
-  let $excursionSlider = $(".excursion__slider-box");
   sliderCounterSlash(".excursion__slider-box", "excursion__slider-counter", {
     dots: true,
     arrows: false,
@@ -144,7 +145,7 @@ $(function () {
   }
   filterBTN();
 
-  let questions = document.querySelectorAll(".questions__click--active");
+  const questions = document.querySelectorAll(".questions__click--active");
   questions.forEach((question) => {
     question.addEventListener(
       "click",
@@ -155,5 +156,20 @@ $(function () {
         passive: true,
       }
     );
+  });
+
+  const burgerMenu = document.querySelector(".burger-menu");
+  const rightMenu = document.querySelector(".right-menu");
+  burgerMenu.addEventListener("click", () => {
+    burgerMenu.classList.toggle("burger-menu-active");
+    rightMenu.classList.toggle("right-menu-active");
+  });
+
+  const firstItemMenu = document.querySelector(
+    ".right-menu__list-item:first-child"
+  );
+  const subMenu = document.querySelector(".right-menu__sub-list");
+  firstItemMenu.addEventListener("click", () => {
+    subMenu.classList.toggle("right-menu__sub-list-active");
   });
 });

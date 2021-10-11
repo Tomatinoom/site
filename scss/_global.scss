@@ -19,6 +19,8 @@ body {
   line-height: 30px;
   color: #fff;
   background-color: #3d3e45;
+  position: relative;
+  overflow-x: hidden;
 }
 .container {
   max-width: 1310px;
@@ -53,6 +55,75 @@ body {
     color: rgba(#fff, 1);
   }
 }
+
+.right-menu {
+  &-inner {
+    padding-top: 75px;
+    padding-left: 80px;
+    margin-bottom: 47px;
+  }
+  &__list {
+    margin-bottom: 80px;
+  }
+  &__list-item {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 27px;
+    text-transform: uppercase;
+    cursor: pointer;
+  }
+  &__list-link {
+    font-size: 20px;
+    color: #fff;
+    line-height: 24px;
+  }
+  &__sub-list {
+    margin-left: 25px;
+    margin-bottom: 27px;
+    transition: all 0.5s ease-in-out;
+    max-height: 0px;
+    overflow: hidden;
+    &.right-menu__sub-list-active {
+      max-height: 1000px;
+      margin-bottom: 39px;
+    }
+  }
+  &__sub-list-item {
+    &:first-child {
+      padding-top: 27px;
+    }
+    padding-top: 25px;
+  }
+  &__sub-list-link {
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+  }
+  &__socials-list {
+    margin-bottom: 23px;
+  }
+}
+.menu__contact-box {
+  padding-bottom: 47px;
+}
+.menu__contact-address,
+.menu__contact-schedule {
+  font-size: 16px;
+}
+.menu-btn-tel {
+  margin-bottom: 65px;
+}
+.btn-mobil {
+  display: inline-block;
+  color: $gold;
+  padding: 22px 44px;
+  background-color: rgba(#fff, 0.1);
+  font-size: 12px;
+  letter-spacing: 1.5px;
+  line-height: 15px;
+  font-weight: 900;
+}
+
 .slider__arrow {
   height: 50px;
   width: 50px;
