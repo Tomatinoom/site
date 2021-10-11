@@ -319,6 +319,7 @@
   }
   .right-menu {
     &.right-menu-active {
+      overflow: visible;
       transform: translateX(0px);
     }
   }
