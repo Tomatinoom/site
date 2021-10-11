@@ -57,11 +57,10 @@ body {
 }
 
 .right-menu {
-  overflow: hidden;
   position: absolute;
   top: 0;
   margin-top: 53px;
-  width: 100%;
+  max-width: 768px;
   height: auto;
   right: 0;
   transform: translateX(500%);
