@@ -1070,6 +1070,7 @@
     border-radius: 14px;
     overflow: hidden;
     height: 450px;
+    width: 540px;
   }
 }
 .footer {
@@ -1177,9 +1178,9 @@
   right: 0;
   max-width: 768px;
   width: 100%;
-  transform: translateX(1000%);
+  transform: translateX(800%);
   transition: transform 0.7s ease-in-out;
-  z-index: 10000;
+  z-index: 10;
   background: linear-gradient(225deg, #3c4148 0%, #15151a 52.08%), #3b3b3b;
   // &.right-menu-active {
   //   transform: translateX(0px);
