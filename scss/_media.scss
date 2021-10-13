@@ -617,16 +617,17 @@
   .excursion__form {
     margin: 0 auto;
   }
-}
-.questions {
-  &-img {
-    display: none;
+  .questions {
+    &-img {
+      display: none;
+    }
+    &-inner {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
   }
-  &-inner {
-    padding-left: 15px;
-    padding-right: 15px;
-  }
 }
+
 .footer {
   &__services-list,
   &__portfolio-list {
