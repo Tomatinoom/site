@@ -227,7 +227,9 @@
 }
 
 .services {
+  background-color: #3d3e45;
   background-color: rgba(#f1f1f1, 0.02);
+  background-blend-mode: multiply;
   padding-bottom: 166px;
   background-size: cover;
   &-title {
