@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  position: relative;
   overflow-x: hidden;
 }
 input[type="number"]::-webkit-outer-spin-button,
@@ -19,8 +20,6 @@ body {
   font-weight: 400;
   color: #fff;
   background-color: #3d3e45;
-  position: relative;
-
   min-width: 320px;
 }
 .container {
@@ -28,7 +27,6 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
-
 .container-fluid {
   max-width: 1920px;
   margin: 0 auto;
