@@ -228,10 +228,11 @@
 
 .services {
   background-color: #3d3e45;
-  background-color: rgba(#f1f1f1, 0.02);
-  background-blend-mode: multiply;
-  padding-bottom: 166px;
-  background-size: cover;
+  &-wrapper {
+    background-color: rgba(#f1f1f1, 0.02);
+    padding-bottom: 166px;
+    background-size: cover;
+  }
   &-title {
     @extend %title-font;
     padding-top: 80px;
