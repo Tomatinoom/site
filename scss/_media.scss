@@ -207,16 +207,31 @@
       padding-left: 35px;
     }
   }
+  .consultation {
+    &-inner {
+      margin-right: 0;
+      padding-left: 25px;
+    }
+    &__content {
+      margin-right: 90px;
+    }
+    &__content-title,
+    &__content-text {
+      margin-right: 0;
+    }
+    &__content-title {
+      font-size: 24px;
+      line-height: 36px;
+    }
+    &__content-text {
+      font-size: 13px;
+    }
+  }
   .form {
     &-box {
       margin-right: 25px;
     }
   }
-  // .excursion {
-  //   &-inner {
-
-  //   }
-  // }
 }
 @media (max-width: 1160px) {
   .benefits {
@@ -441,6 +456,12 @@
       margin-bottom: 34px;
     }
   }
+  .consultation {
+    &__content {
+      margin-right: 56px;
+      width: 350px;
+    }
+  }
 }
 @media (max-width: 800px) {
   .header__slider::after {
@@ -536,78 +557,85 @@
       transform: translateX(0px);
     }
   }
-  .excursion {
-    &-inner {
-      flex-direction: column;
-      align-items: center;
-      padding-top: 76px;
-    }
-    &__slider {
-      width: 500px;
-      padding-top: 0;
-      padding-left: 10px;
-      padding-bottom: 80px;
-      margin: 0 auto;
-    }
-    &__slider-item {
-      font-size: 28px;
-      line-height: 38px;
-      padding-bottom: 80px;
-    }
-    &__form {
-      margin: 0 auto;
-    }
+  .excursion-inner,
+  .consultation-inner {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 76px;
   }
-  .footer {
-    &__services-list,
-    &__portfolio-list {
-      display: none;
-    }
-    &-top {
-      margin-bottom: 39px;
-    }
-    &-top-inner {
-      flex-direction: column;
-      justify-content: flex-start;
-      padding-left: 25px;
-    }
-    &__services,
-    &__services-title,
-    &__portfolio-title {
-      padding: 0;
-      margin: 0;
-    }
-    &__services,
-    &__portfolio {
-      margin-bottom: 16px;
-    }
-    &__contact {
-      padding-top: 30px;
-      margin-right: 12px;
-    }
-    &-bottom {
-      display: flex;
-      flex-direction: column-reverse;
-      padding-left: 25px;
-      align-items: flex-start;
-    }
-    &-bottom__copyright-box {
-      display: flex;
-      flex-direction: column;
-    }
-    &-bottom__privacy-box {
-      display: flex;
-    }
-    &-bottom__privacy-policy,
-    &-bottom__agreement {
-      margin-bottom: 22px;
-    }
-    &__info-list {
-      margin-bottom: 45px;
-    }
-    &__contact-address {
-      white-space: normal;
-    }
+  .consultation-inner {
+    padding-left: 0;
+  }
+  .excursion__slider,
+  .consultation__content {
+    width: 500px;
+    padding-top: 0;
+    padding-left: 10px;
+    padding-bottom: 80px;
+    margin: 0 auto;
+  }
+  .consultation__content-text,
+  .consultation__content-title {
+    width: 500px;
+  }
+  .excursion__slider-item {
+    font-size: 28px;
+    line-height: 38px;
+    padding-bottom: 80px;
+  }
+  .excursion__form {
+    margin: 0 auto;
+  }
+}
+.footer {
+  &__services-list,
+  &__portfolio-list {
+    display: none;
+  }
+  &-top {
+    margin-bottom: 39px;
+  }
+  &-top-inner {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-left: 25px;
+  }
+  &__services,
+  &__services-title,
+  &__portfolio-title {
+    padding: 0;
+    margin: 0;
+  }
+  &__services,
+  &__portfolio {
+    margin-bottom: 16px;
+  }
+  &__contact {
+    padding-top: 30px;
+    margin-right: 12px;
+  }
+  &-bottom {
+    display: flex;
+    flex-direction: column-reverse;
+    padding-left: 25px;
+    align-items: flex-start;
+  }
+  &-bottom__copyright-box {
+    display: flex;
+    flex-direction: column;
+  }
+  &-bottom__privacy-box {
+    display: flex;
+  }
+  &-bottom__privacy-policy,
+  &-bottom__agreement {
+    margin-bottom: 22px;
+  }
+  &__info-list {
+    margin-bottom: 45px;
+  }
+  &__contact-address {
+    white-space: normal;
   }
 }
 @media (max-width: 670px) {
@@ -844,6 +872,13 @@
       button {
         width: 50px;
       }
+    }
+  }
+  .consultation {
+    &__content,
+    &__content-title,
+    &__content-text {
+      width: 290px;
     }
   }
   .form {
