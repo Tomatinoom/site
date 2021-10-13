@@ -281,6 +281,7 @@
   }
   &__item {
     display: flex;
+    justify-content: space-between;
     &:first-child {
       padding-left: 117px;
       margin-bottom: 223px;
@@ -291,6 +292,7 @@
   }
   &__item-content {
     max-width: 448px;
+    min-width: 300px;
   }
   &__item-content-first {
     margin-right: 96px;
@@ -333,8 +335,7 @@
       margin-right: -26px;
     }
     &-2 {
-      height: 275px;
-      height: 275px;
+      max-height: 275px;
       object-fit: cover;
       margin-right: 63px;
     }
