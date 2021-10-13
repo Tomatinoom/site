@@ -5,6 +5,12 @@
     }
   }
 }
+@media (max-width: 1470px) {
+  .excursion {
+    box-shadow: none;
+  }
+}
+
 @media (max-width: 1420px) {
   .header {
     &__slider-text {
@@ -43,14 +49,12 @@
     &__slider-img {
       max-width: 915px;
     }
-    &-top__nav {
+    &-top__nav,
+    &-bottom-background {
       max-width: 830px;
     }
     &-top__nav-logo {
       margin-right: 30px;
-    }
-    &-bottom-background {
-      max-width: 830px;
     }
     &-bottom__nav-item {
       margin-right: 47px;
@@ -60,9 +64,7 @@
     &__services {
       margin-right: 60px;
     }
-    &__portfolio {
-      margin-right: 80px;
-    }
+    &__portfolio,
     &__info {
       margin-right: 80px;
     }
@@ -200,6 +202,21 @@
       margin-right: 20px;
     }
   }
+  .excursion {
+    &__slider {
+      padding-left: 35px;
+    }
+  }
+  .form {
+    &-box {
+      margin-right: 25px;
+    }
+  }
+  // .excursion {
+  //   &-inner {
+
+  //   }
+  // }
 }
 @media (max-width: 1160px) {
   .benefits {
@@ -303,6 +320,15 @@
       margin-right: 10px;
     }
   }
+  .excursion {
+    &__slider {
+      width: 450px;
+    }
+    &__slider-item {
+      font-size: 24px;
+      line-height: 32px;
+    }
+  }
 }
 @media (max-width: 970px) {
   .slider__counter {
@@ -383,6 +409,15 @@
   }
 }
 @media (max-width: 840px) {
+  .excursion {
+    &__slider {
+      width: 370px;
+    }
+    &__slider-item {
+      font-size: 22px;
+      line-height: 32px;
+    }
+  }
   .contacts {
     &-inner {
       padding-top: 105px;
@@ -499,6 +534,28 @@
   .right-menu {
     &.right-menu-active {
       transform: translateX(0px);
+    }
+  }
+  .excursion {
+    &-inner {
+      flex-direction: column;
+      align-items: center;
+      padding-top: 76px;
+    }
+    &__slider {
+      width: 500px;
+      padding-top: 0;
+      padding-left: 10px;
+      padding-bottom: 80px;
+      margin: 0 auto;
+    }
+    &__slider-item {
+      font-size: 28px;
+      line-height: 38px;
+      padding-bottom: 80px;
+    }
+    &__form {
+      margin: 0 auto;
     }
   }
   .footer {
@@ -703,6 +760,16 @@
       margin-right: 10px;
     }
   }
+  .excursion {
+    &__slider {
+      width: 390px;
+    }
+    &__slider-item {
+      margin-bottom: 100px;
+      font-size: 24px;
+      line-height: 30px;
+    }
+  }
   .footer__contact-address {
     padding-bottom: 22px;
   }
@@ -760,6 +827,28 @@
       &-3 {
         margin-right: -30%;
       }
+    }
+  }
+  .excursion {
+    &__slider {
+      width: 300px;
+      padding-left: 0;
+      // margin-left: 0px;
+    }
+    &__slider-item {
+      margin-bottom: 100px;
+      font-size: 22px;
+      line-height: 28px;
+    }
+    &__dots {
+      button {
+        width: 50px;
+      }
+    }
+  }
+  .form {
+    &-title {
+      font-size: 20px;
     }
   }
   .footer {
