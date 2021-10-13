@@ -884,6 +884,7 @@
 
 .questions {
   padding-top: 31px;
+  background-color: #3d3e45;
   &-inner {
     display: flex;
     justify-content: space-between;
@@ -897,15 +898,14 @@
   }
   &__box {
     margin-bottom: 215px;
-  }
-  &__box__items {
-    max-width: 733px;
-    width: 100%;
+    margin-right: 20px;
+    min-width: 230px;
+    max-width: 760px;
   }
   &__box__item {
     position: relative;
     display: grid;
-    grid-template-columns: 670px 20px;
+    grid-template-columns: 96% 20px;
     margin-bottom: 34px;
     border-bottom: 1px solid rgba(#fff, 0.5);
   }
@@ -915,6 +915,7 @@
     width: 20px;
     height: 14px;
     padding: 15px;
+    padding-left: 30px;
     background-repeat: no-repeat;
     background-position: center center;
     border: none;
@@ -962,6 +963,7 @@
 
 .consultation {
   background-image: url("data:image/svg+xml,%3Csvg width='1440' height='509' viewBox='0 0 1440 509' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath opacity='0.02' fill-rule='evenodd' clip-rule='evenodd' d='M-38.3984 0.884766H97.3979H263.356L97.3979 507.356H-38.3984V0.884766ZM346.19 0.884766H429.023L263.356 508.885H180.523L346.19 0.884766ZM511.856 0.884766H1478.4V508.885H346.189L511.856 0.884766Z' fill='white'/%3E%3C/svg%3E");
+  background-color: #3d3e45;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
