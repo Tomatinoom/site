@@ -9,6 +9,14 @@
   .excursion {
     box-shadow: none;
   }
+  .portfolio {
+    &__dots {
+      width: 555px;
+      button {
+        width: calc(555px / 15);
+      }
+    }
+  }
 }
 
 @media (max-width: 1420px) {
@@ -114,6 +122,16 @@
       margin-right: 37px;
     }
   }
+  .portfolio {
+    &__dots {
+      width: 400px;
+      button {
+        width: calc(400px / 15);
+      }
+    }
+  }
+}
+@media (max-width: 1240px) {
 }
 @media (max-width: 1210px) {
   .slider__counter {
@@ -132,6 +150,11 @@
   }
   .slider__btn-left {
     right: 155px;
+  }
+  .portfolio {
+    &__slider-box > .slider__btn-left {
+      right: 100px;
+    }
   }
 }
 @media (max-width: 1180px) {
@@ -250,6 +273,28 @@
   .questions-img {
     margin-right: 0;
   }
+  .reviews {
+    &__slider-left {
+      left: -35px;
+    }
+    &__slider-right {
+      right: -35px;
+    }
+  }
+  .portfolio {
+    &__nav-list {
+      justify-content: flex-end;
+      margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 1060px) {
+  .portfolio {
+    &__dots {
+      right: 46%;
+    }
+  }
 }
 @media (max-width: 1024px) {
   .header {
@@ -340,6 +385,11 @@
       margin-right: 10px;
     }
   }
+  .portfolio {
+    &__slider {
+      padding-top: 64px;
+    }
+  }
   .questions {
     &__box {
       margin-bottom: 110px;
@@ -392,6 +442,17 @@
     max-width: 150px;
     left: 10px;
   }
+  .portfolio {
+    &__dots {
+      width: 300px;
+      button {
+        width: calc(300px / 15);
+      }
+    }
+    &__slider-box > .slider__btn-left {
+      right: 40px;
+    }
+  }
   .footer {
     &__services-title-link,
     &__portfolio-title-link,
@@ -412,9 +473,23 @@
     font-size: 17px;
     max-width: 100px;
   }
+  .portfolio {
+    &__top {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    &__title {
+      margin-bottom: 28px;
+    }
+  }
   .questions {
     &-img {
       max-width: 380px;
+    }
+  }
+  .reviews {
+    &__slider__item-quote {
+      max-width: 500px;
     }
   }
 }
@@ -493,6 +568,11 @@
       width: 350px;
     }
   }
+  .portfolio {
+    &__dots {
+      right: 42%;
+    }
+  }
 }
 @media (max-width: 800px) {
   .header__slider::after {
@@ -513,6 +593,12 @@
     font-size: 14px;
     max-width: 100px;
     left: 15px;
+  }
+  .reviews {
+    &__slider__item-quote-text {
+      font-size: 14px;
+      line-height: 25px;
+    }
   }
 }
 
@@ -583,6 +669,14 @@
   .header__container {
     padding: 0;
   }
+  .portfolio {
+    &__arrow {
+      display: none;
+    }
+    &__slider-counter {
+      left: 0;
+    }
+  }
   .right-menu {
     &.right-menu-active {
       transform: translateX(0px);
@@ -608,6 +702,7 @@
   .consultation__content-text,
   .consultation__content-title {
     width: 500px;
+    line-height: 25px;
   }
   .excursion__slider-item {
     font-size: 28px;
@@ -616,6 +711,11 @@
   }
   .excursion__form {
     margin: 0 auto;
+  }
+  .reviews {
+    &__top-flamp-link-text {
+      display: none;
+    }
   }
   .questions {
     &-img {
@@ -678,6 +778,37 @@
     }
   }
 }
+@media (max-width: 700px) {
+  .portfolio {
+    &__slider-box {
+      & .slick-slide {
+        margin: 50px 15px 150px 15px;
+      }
+    }
+    &__slider-item-img {
+      width: 320px;
+      height: 323px;
+    }
+    &__item-box {
+      width: 320px;
+    }
+    &__info-place {
+      font-size: 10px;
+      line-height: 13px;
+      //
+      //
+      //
+    }
+  }
+  .reviews {
+    &__slider__item-quote {
+      max-width: 390px;
+    }
+    &__slider__item-quote-text {
+      line-height: 19px;
+    }
+  }
+}
 @media (max-width: 670px) {
   .benefits {
     &__item-text {
@@ -705,6 +836,26 @@
       height: 377px;
       border-radius: 0;
       margin: 0 -15px;
+    }
+  }
+  .reviews {
+    &__slider-left {
+      left: -110px;
+    }
+    &__slider-right {
+      right: -110px;
+    }
+  }
+  .portfolio {
+    &__slider-counter {
+      & .slide-current {
+        font-size: 38px;
+        line-height: 38px;
+      }
+      & .slide-count {
+        font-size: 19px;
+        line-height: 38px;
+      }
     }
   }
 }
@@ -738,6 +889,20 @@
     left: 15px;
   }
 }
+@media (max-width: 590px) {
+  .portfolio {
+    &__slider-counter {
+      left: -15%;
+    }
+    &__dots {
+      width: 200px;
+      right: 35%;
+      button {
+        width: calc(200px / 15);
+      }
+    }
+  }
+}
 @media (max-width: 570px) {
   .contacts {
     &__socials {
@@ -764,6 +929,19 @@
         top: 10px;
         left: -30px;
       }
+    }
+  }
+  .reviews {
+    padding: 0 10px;
+    margin-bottom: 107px;
+    &__slider__item-quote {
+      max-width: 390px;
+    }
+    &__slider-left {
+      display: none;
+    }
+    &__slider-right {
+      display: none;
     }
   }
 }
@@ -826,6 +1004,32 @@
     &__item__list-img {
       float: none;
       margin-right: 10px;
+    }
+  }
+  .portfolio {
+    &__title {
+      font-size: 30px;
+      line-height: 38px;
+    }
+    &__nav-link {
+      font-size: 11px;
+      line-height: 15px;
+    }
+
+    &__nav-item:not(:last-child) {
+      margin-right: 22px;
+    }
+  }
+  .reviews {
+    &__top-flamp {
+      padding-top: 0px;
+    }
+    &__top {
+      margin-bottom: 52px;
+    }
+    &__top-title {
+      font-size: 28px;
+      line-height: 38px;
     }
   }
   .excursion {
@@ -912,11 +1116,16 @@
       }
     }
   }
+  .portfolio {
+    &-slider__more-works {
+      margin-right: 70%;
+      margin-left: 30%;
+    }
+  }
   .excursion {
     &__slider {
       width: 300px;
       padding-left: 0;
-      // margin-left: 0px;
     }
     &__slider-item {
       margin-bottom: 100px;
@@ -975,6 +1184,13 @@
     &__sub-list-link {
       font-size: 12px;
       line-height: 15px;
+    }
+  }
+}
+@media (max-width: 370px) {
+  .portfolio {
+    &__slider-counter {
+      left: -25%;
     }
   }
 }
