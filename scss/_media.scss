@@ -416,14 +416,16 @@
   }
 }
 @media (max-width: 970px) {
-  .slider__counter {
-    display: none;
-  }
-  .slider__btn-right {
-    right: 50px;
-  }
-  .slider__btn-left {
-    right: 95px;
+  .header__slider-box {
+    & .slider__counter {
+      display: none;
+    }
+    & .slider__btn-right {
+      right: 50px;
+    }
+    & .slider__btn-left {
+      right: 95px;
+    }
   }
   .header__slider-title {
     right: 110px;
@@ -671,7 +673,7 @@
   }
   .portfolio {
     &__arrow {
-      display: none;
+      display: none !important;
     }
     &__slider-counter {
       left: 0;
@@ -849,7 +851,7 @@
   .portfolio {
     &__slider-counter {
       & .slide-current {
-        font-size: 38px;
+        font-size: 35px;
         line-height: 38px;
       }
       & .slide-count {
@@ -892,7 +894,7 @@
 @media (max-width: 590px) {
   .portfolio {
     &__slider-counter {
-      left: -15%;
+      left: -10%;
     }
     &__dots {
       width: 200px;
@@ -1190,7 +1192,7 @@
 @media (max-width: 370px) {
   .portfolio {
     &__slider-counter {
-      left: -25%;
+      left: -22%;
     }
   }
 }
