@@ -158,6 +158,14 @@
   }
 }
 @media (max-width: 1180px) {
+  .summary {
+    &-inner {
+      padding-left: 40px;
+    }
+    &__info {
+      margin-right: 30px;
+    }
+  }
   .contacts {
     &-inner {
       flex-wrap: wrap;
@@ -285,6 +293,34 @@
     &__nav-list {
       justify-content: flex-end;
       margin-right: 15px;
+    }
+  }
+}
+
+@media (max-width: 1080px) {
+  .summary {
+    &-inner {
+      flex-direction: column;
+      padding-left: 0;
+    }
+    &__info {
+      text-align: center;
+    }
+    &__info-title {
+      margin-bottom: 34px;
+    }
+    &__info-text {
+      max-width: 1000px;
+      margin-bottom: 60px;
+    }
+    &__videos {
+      margin: 0 auto;
+      grid-gap: 20px;
+    }
+  }
+  .portfolio {
+    &-slider__more-works {
+      margin-bottom: 99px;
     }
   }
 }
@@ -679,6 +715,23 @@
       left: 0;
     }
   }
+  .summary {
+    &__info {
+      padding-top: 0px;
+    }
+    &__info-title {
+      font-size: 30px;
+      line-height: 38px;
+    }
+    &__info-text {
+      font-size: 18px;
+      line-height: 28px;
+      margin-bottom: 48px;
+    }
+    &__info-number {
+      font-size: 35px;
+    }
+  }
   .right-menu {
     &.right-menu-active {
       transform: translateX(0px);
@@ -794,12 +847,14 @@
     &__item-box {
       width: 320px;
     }
-    &__info-place {
+    &__info-place,
+    &__info-year {
       font-size: 10px;
       line-height: 13px;
-      //
-      //
-      //
+    }
+    &__item-title {
+      font-size: 20px;
+      line-height: 24px;
     }
   }
   .reviews {
@@ -832,7 +887,22 @@
     }
   }
 }
-@media (max-width: 660px) {
+@media (max-width: 661px) {
+  .summary {
+    &__slider {
+      & .slick-slide {
+        margin: 0 8px 50px 5px;
+        width: 305px;
+        height: 309px;
+      }
+      & .slick-current {
+        .summary__videos-item__popup-play {
+          opacity: 1;
+          transition: opacity 0.5s;
+        }
+      }
+    }
+  }
   .contacts {
     &__map {
       height: 377px;
@@ -1192,7 +1262,15 @@
 @media (max-width: 370px) {
   .portfolio {
     &__slider-counter {
-      left: -22%;
+      left: -23%;
     }
   }
 }
+
+// @media (max-width: 321px) {
+//   .portfolio {
+//     &__slider-counter {
+//       left: -20%;
+//     }
+//   }
+// }

@@ -426,6 +426,7 @@
 
 .summary {
   margin-bottom: 117px;
+  background-color: #3d3e45;
   &-inner {
     display: flex;
     padding-left: 100px;
@@ -508,7 +509,9 @@
 
 // portfolio-slider
 .portfolio {
-  background-color: #3d3e45;
+  &__slider {
+    background-color: #3d3e45;
+  }
   &__top {
     display: flex;
     justify-content: space-between;

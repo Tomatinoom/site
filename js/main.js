@@ -172,4 +172,56 @@ $(function () {
   firstItemMenu.addEventListener("click", () => {
     subMenu.classList.toggle("right-menu__sub-list-active");
   });
+
+  function addSlider() {
+    return $(".summary__slider").slick({
+      arrows: false,
+      autoplay: true,
+      centerMode: true,
+      slidesToShow: 3,
+      slidesToScroll: 1,
+      variableWidth: true,
+      dots: true,
+      dotsClass: "reviews__dots",
+    });
+  }
+  function deletSlider() {
+    return $(".summary__slider").slick("unslick");
+  }
+  const summaryVideos = document.querySelector(".summary__videos");
+  function checkClientWidth() {
+    return document.documentElement.clientWidth;
+  }
+  function createSlider() {
+    if (checkClientWidth() <= 660) {
+      summaryVideos.classList.remove("summary__videos");
+      summaryVideos.classList.add("summary__slider");
+      addSlider();
+    } else {
+      deletSlider();
+      summaryVideos.classList.remove("summary__slider");
+      summaryVideos.classList.add("summary__videos");
+    }
+  }
+  createSlider();
+  window.onresize = createSlider;
+
+  //   arrows: false,
+  //   responsive: [
+  //     {
+  //       breakpoint: 6000,
+  //       settings: "unslick",
+  //     },
+  //     {
+  //       breakpoint: 660,
+  //       settings: {
+  //         centerMode: true,
+  //         slidesToShow: 3,
+  //         slidesToScroll: 1,
+  //         dots: true,
+  //         dotsClass: "reviews__dots",
+  //       },
+  //     },
+  //   ],
+  // });
 });
