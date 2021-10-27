@@ -45,7 +45,7 @@
                                 <img class="header-top__instagram-img header-top__instagram-img--white"
                                     src="images/icon/logo-instagram-black.svg" alt="">
                             </a>
-                            <div class="burger-menu">
+                            <div class="burger-menu ">
                                 <span class="burger-menu__line"></span>
                                 <span class="burger-menu__line"></span>
                                 <span class="burger-menu__line"></span>
@@ -559,10 +559,17 @@
                 </div>
             </section>
 
-            <!-- <section class="portfolio-filter">
+            <section class="portfolio-filter">
                 <div class="container">
+                    <div class="portfolio-filter-popup">
+                        <h3 class="portfolio-filter-popup__title">Фильтр</h3>
+                        <a class="portfolio-filter-popup__settings" data-fancybox href="#filters__popup">
+                            <img class="portfolio-filter-popup__settings-img" src="images/icon/filter-settings.svg"
+                                alt="settings">
+                        </a>
+                    </div>
                     <div class="portfolio-filters">
-                        <div class="portfolio-filters-top">
+                        <div class="portfolio-filter-top">
                             <button class="filter__btn-category filter__btn-active" data-filter="studio">Студии</button>
                             <button class="filter__btn-category" data-filter="one-room">1-комнатные</button>
                             <button class="filter__btn-category" data-filter="twoe-rooms">2-комнатные</button>
@@ -587,6 +594,38 @@
                             </div>
                             <input type="reset" class="filter-bottom__clear" value="Очистить"></input>
                         </form>
+                        <div class="portfolio-filter__popup-box" id="filters__popup">
+                            <div class="portfolio-filter__popup-title">Фильтр</div>
+                            <div class="portfolio-filter-top">
+                                <button class="filter__btn-category filter__btn-active"
+                                    data-filter="studio">Студии</button>
+                                <button class="filter__btn-category" data-filter="one-room">1-комнатные</button>
+                                <button class="filter__btn-category" data-filter="twoe-rooms">2-комнатные</button>
+                                <button class="filter__btn-category" data-filter="three-rooms">3-комнатные</button>
+                                <button class="filter__btn-category" data-filter="more-rooms">4+комнатные</button>
+                                <button class="filter__btn-category" data-filter="houses">Дома</button>
+                            </div>
+                            <form class="portfolio-filter-bottom">
+                                <div class="filter-bottom-box">
+                                    <div class="filter__cost">
+                                        <span class="filter__cost-title">Цена проекта, ₽</span>
+                                        <div class="filter__cost-box-inputs">
+                                            <input class="filter__cost-from" type="number" placeholder="от">
+                                            <input class="filter__cost-to" type="number" placeholder="до">
+                                        </div>
+                                    </div>
+                                    <div class="filter__area">
+                                        <span class="filter__area-title">Площадь помещения, кв. м</span>
+                                        <input class="filter__area-input filter__area-from" type="number"
+                                            placeholder="от" value="">
+                                        <input class="filter__area-input filter__area-to" type="number" placeholder="до"
+                                            value="">
+                                    </div>
+                                </div>
+                                <input type="reset" class="filter-bottom__clear" value="Очистить"></input>
+                            </form>
+                            <button class="portfolio-filter__popup-submit btn-mobil" type="submit">Применить</button>
+                        </div>
                     </div>
                     <div class="portfolio-filter__items">
                         <div class="portfolio-filter__items-box">
@@ -908,7 +947,7 @@
                             </div>
                         </div>
                     </div>
-            </section> -->
+            </section>
 
             <!--      SUMMARY      -->
             <section class="summary">

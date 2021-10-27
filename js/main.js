@@ -205,23 +205,20 @@ $(function () {
   }
   createSlider();
   window.onresize = createSlider;
+  $(".portfolio-filter-popup__settings").fancybox({
+    beforeShow: function () {
+      $("body").css({ "overflow-y": "hidden" });
+    },
 
-  //   arrows: false,
-  //   responsive: [
-  //     {
-  //       breakpoint: 6000,
-  //       settings: "unslick",
-  //     },
-  //     {
-  //       breakpoint: 660,
-  //       settings: {
-  //         centerMode: true,
-  //         slidesToShow: 3,
-  //         slidesToScroll: 1,
-  //         dots: true,
-  //         dotsClass: "reviews__dots",
-  //       },
-  //     },
-  //   ],
-  // });
+    afterClose: function () {
+      $("body").css({ "overflow-y": "visible" });
+    },
+    scrollOutside: "false",
+    helpers: {
+      overlay: {
+        locked: true,
+        css: { overflow: hidden },
+      },
+    },
+  });
 });
