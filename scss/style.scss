@@ -1166,7 +1166,7 @@
     text-align: center;
     font-size: 12px;
     line-height: 15px;
-    letter-spacing: 1.5;
+    letter-spacing: 1.5px;
     font-weight: 900;
     text-transform: uppercase;
   }
@@ -1264,7 +1264,7 @@
     line-height: 14px;
     display: flex;
     align-items: center;
-    margin-bottom: 59px;
+    padding-bottom: 59px;
     &__privacy-policy,
     &__agreement {
       color: #fff;
