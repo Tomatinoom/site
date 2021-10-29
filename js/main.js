@@ -205,20 +205,4 @@ $(function () {
   }
   createSlider();
   window.onresize = createSlider;
-  $(".portfolio-filter-popup__settings").fancybox({
-    beforeShow: function () {
-      $("body").css({ "overflow-y": "hidden" });
-    },
-
-    afterClose: function () {
-      $("body").css({ "overflow-y": "visible" });
-    },
-    scrollOutside: "false",
-    helpers: {
-      overlay: {
-        locked: true,
-        css: { overflow: hidden },
-      },
-    },
-  });
 });
